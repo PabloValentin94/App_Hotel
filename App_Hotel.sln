@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Hotel.UWP", "App_Hotel\App_Hotel.UWP\App_Hotel.UWP.csproj", "{84962C59-D24C-458B-A4A0-4FE536D1067B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Hotel.Android", "App_Hotel\App_Hotel.Android\App_Hotel.Android.csproj", "{C48373B7-B327-49FF-B458-BD69B850EB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Hotel", "App_Hotel\App_Hotel\App_Hotel.csproj", "{FF7081C3-3BD7-4B3D-9C38-3D455D401D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App_Hotel", "App_Hotel\App_Hotel\App_Hotel.csproj", "{FF7081C3-3BD7-4B3D-9C38-3D455D401D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,30 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|Any CPU.Build.0 = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|Any CPU.Deploy.0 = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|ARM.ActiveCfg = Debug|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|ARM.Build.0 = Debug|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|ARM.Deploy.0 = Debug|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x64.ActiveCfg = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x64.Build.0 = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x64.Deploy.0 = Debug|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x86.ActiveCfg = Debug|x86
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x86.Build.0 = Debug|x86
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Debug|x86.Deploy.0 = Debug|x86
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|Any CPU.ActiveCfg = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|Any CPU.Build.0 = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|Any CPU.Deploy.0 = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|ARM.ActiveCfg = Release|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|ARM.Build.0 = Release|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|ARM.Deploy.0 = Release|ARM
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x64.ActiveCfg = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x64.Build.0 = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x64.Deploy.0 = Release|x64
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x86.ActiveCfg = Release|x86
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x86.Build.0 = Release|x86
-		{84962C59-D24C-458B-A4A0-4FE536D1067B}.Release|x86.Deploy.0 = Release|x86
 		{C48373B7-B327-49FF-B458-BD69B850EB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C48373B7-B327-49FF-B458-BD69B850EB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C48373B7-B327-49FF-B458-BD69B850EB5C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
