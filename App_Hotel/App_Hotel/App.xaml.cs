@@ -12,7 +12,7 @@ namespace App_Hotel
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new View.Login());
 
         }
 
