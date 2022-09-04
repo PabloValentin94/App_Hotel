@@ -18,17 +18,6 @@ namespace App_Hotel
             new Model.Suites()
             {
 
-                descricao = "Suite Cellbit",
-
-                valor_diaria_adultos = 1000.00,
-
-                valor_diaria_criancas = 500.00
-
-            },
-
-            new Model.Suites()
-            {
-
                 descricao = "Suite Super Luxo",
 
                 valor_diaria_adultos = 200.00,
@@ -56,17 +45,6 @@ namespace App_Hotel
                 valor_diaria_adultos = 80.00,
 
                 valor_diaria_criancas = 40.00
-
-            },
-
-            new Model.Suites()
-            {
-
-                descricao = "Quarto da Limpeza",
-
-                valor_diaria_adultos = 20.00,
-
-                valor_diaria_criancas = 10.00
 
             }
 

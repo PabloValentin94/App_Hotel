@@ -7,9 +7,16 @@
     
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
+            
+            <!-- Título -->
 
-            <Grid x:Name="first_grid" RowSpacing="1" ColumnSpacing="1" Padding="15">
+            <Label Text="Cálculo da Diária"
+                       HorizontalTextAlignment="Center"
+                       Margin="15,0,15,25"
+                       Style="{ StaticResource titulo }"/>
+
+            <Grid x:Name="g1" RowSpacing="1" ColumnSpacing="1" Padding="15,0,15,25">
 
                 <Grid.ColumnDefinitions>
 
@@ -22,61 +29,110 @@
 
                 <Grid.RowDefinitions>
 
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="75"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="70"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
 
                 </Grid.RowDefinitions>
-                
-                <!-- Título -->
 
-                <Label Text="Cálculo da Diária"
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="CenterAndExpand"
-                       Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
-                       Style="{ StaticResource titulo }"/>
-                
                 <!-- Adultos -->
 
-                <Label Text="Adultos" Style="{ StaticResource lbl_campos }"
-                       Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Adultos:" HorizontalTextAlignment="End"
+                       Grid.Column="0" Grid.Row="0"
+                       FontSize="Medium" TextColor="#0000FF"
+                       Style="{ StaticResource lbl_campos }"/>
 
-                <Stepper x:Name="stepper_adultos" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"
-                         Minimum="1" Maximum="10" Increment="1"/>
+                <Stepper x:Name="stepper_adultos" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"
+                         Minimum="0" Maximum="10" Increment="1"/>
 
                 <Label x:Name="lbl_qnt_adultos"
-                       Grid.Column="1" Grid.Row="1"
+                       Grid.Column="1" Grid.Row="0"
                        Style="{ StaticResource lbl_valores_stepper }"
                        BindingContext="{ x:Reference stepper_adultos }"
                        Text="{ Binding Value }"/>
-                
+
                 <!-- Crianças -->
 
-                <Label Text="Crianças" Style="{ StaticResource lbl_campos }"
-                       Grid.Column="0" Grid.Row="2"/>
+                <Label Text="Crianças:" HorizontalTextAlignment="End"
+                       Grid.Column="0" Grid.Row="1"
+                       FontSize="Medium" TextColor="#0000FF"
+                       Style="{ StaticResource lbl_campos }"/>
 
-                <Stepper x:Name="stepper_criancas" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"
-                         Minimum="1" Maximum="15" Increment="1"/>
+                <Stepper x:Name="stepper_criancas" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"
+                         Minimum="0" Maximum="15" Increment="1"/>
 
                 <Label x:Name="lbl_qnt_criancas"
-                       Grid.Column="1" Grid.Row="2"
+                       Grid.Column="1" Grid.Row="1"
                        Style="{ StaticResource lbl_valores_stepper }"
                        BindingContext="{ x:Reference stepper_criancas }"
                        Text="{ Binding Value }"/>
-                
+
                 <!-- O "BindingContext" é um elemento, cuja função é, basicamente, buscar informações sobre um 
                 determinado elemento no sistema. Caso ele não consiga encontrar, então ocorrerá um erro.
                      O "Binding" serve para que possamos retornar um dos parâmetros do elemento encontrado. Nesse 
                      caso, por exemplo, os parâmetros disponíveis são: Value; Minimum; Maximum; etc. -->
 
+                <!-- Picker -->
+
+                <Label Text="Escolha uma opção:" TextColor="#FF0000"
+                               Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
+
+                <Picker x:Name="pck_suite" Title="Escolha a suite desejada:"
+                                TitleColor="#000000" TextColor="#FFFFFF"
+                                Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4"
+                                ItemDisplayBinding="{ Binding descricao }"
+                                HorizontalTextAlignment="Center" VerticalOptions="Center"
+                                FontSize="17" FontAttributes="Bold"/>
+
+                <Label Text="Check-In:"
+                       Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4"
+                       HorizontalTextAlignment="Center"
+                       Style="{ StaticResource subtitulo }"/>
+
+                <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy"
+                            TextColor="#FFFFFF"
+                            Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"
+                            HorizontalOptions="Center" VerticalOptions="End"
+                            FontSize="17"
+                            DateSelected="dtpck_checkin_DateSelected"/>
+
+                <TimePicker x:Name="tmpck_checkin" Format="HH:mm:ss"
+                            TextColor="#FFFFFF"
+                            Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
+                            HorizontalOptions="Center" VerticalOptions="End"
+                            FontSize="17"/>
+
+                <Label Text="Check-Out:"
+                       Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4"
+                       HorizontalTextAlignment="Center"
+                       Style="{ StaticResource subtitulo }"/>
+
+                <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"
+                            TextColor="#FFFFFF"
+                            Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2"
+                            HorizontalOptions="Center" VerticalOptions="End"
+                            FontSize="17"/>
+
+                <TimePicker x:Name="tmpck_checkout" Format="HH:mm:ss"
+                            TextColor="#FFFFFF"
+                            Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2"
+                            HorizontalOptions="Center" VerticalOptions="End"
+                            FontSize="17"/>
+
             </Grid>
-            
+
+            <Button x:Name="btn_calcular" Text="Calcular gastos" Background="#008000"
+                    TextColor="#FFFFFF"
+                    Margin="15,0,15,0"
+                    Clicked="btn_calcular_Clicked"/>
+
         </StackLayout>
         
     </ContentPage.Content>

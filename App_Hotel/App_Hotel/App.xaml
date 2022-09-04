@@ -13,14 +13,19 @@
 
         </Style>
 
+        <Style x:Key="subtitulo" TargetType="Label" BaseResourceKey="lbl_campos">
+
+            <Setter Property="TextColor" Value="#FF0000"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="FontSize" Value="Medium"/>
+
+        </Style>
+
         <Style x:Key="lbl_campos" TargetType="Label">
 
             <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-            <Setter Property="HorizontalTextAlignment" Value="End"/>
-            <Setter Property="Margin" Value="0,0,5,0"/>
-            <Setter Property="FontSize" Value="Medium"/>
-            <Setter Property="TextColor" Value="#FFFFFF"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
 
         </Style>
 
@@ -30,7 +35,7 @@
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="FontSize" Value="Medium"/>
             <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="TextColor" Value="#0000FF"/>
+            <Setter Property="TextColor" Value="#FFFFFF"/>
 
         </Style>
 
