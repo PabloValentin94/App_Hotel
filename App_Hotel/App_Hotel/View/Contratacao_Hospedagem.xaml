@@ -91,6 +91,8 @@
                                 HorizontalTextAlignment="Center" VerticalOptions="Center"
                                 FontSize="17" FontAttributes="Bold"/>
 
+                <!-- Check-In -->
+                
                 <Label Text="Check-In:"
                        Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4"
                        HorizontalTextAlignment="Center"
@@ -108,6 +110,8 @@
                             Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
                             HorizontalOptions="Center" VerticalOptions="End"
                             FontSize="17"/>
+                
+                <!-- Check-Out -->
 
                 <Label Text="Check-Out:"
                        Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4"
@@ -128,6 +132,8 @@
 
             </Grid>
 
+            <!-- Botão -->
+            
             <Button x:Name="btn_calcular" Text="Calcular gastos" Background="#008000"
                     TextColor="#FFFFFF"
                     Margin="15,0,15,0"
