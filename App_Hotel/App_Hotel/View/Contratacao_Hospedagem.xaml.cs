@@ -64,9 +64,13 @@ namespace App_Hotel.View
             try
             {
 
+                // Convertendo os textos da labels:
+
                 int qnt_adultos = Convert.ToInt32(lbl_qnt_adultos.Text);
 
                 int qnt_criancas = Convert.ToInt32(lbl_qnt_criancas.Text);
+
+                // Criando memsagens para possíveis erros: 
 
                 if(qnt_adultos.Equals(0) && qnt_criancas.Equals(0))
                 {
@@ -81,6 +85,61 @@ namespace App_Hotel.View
                     throw new Exception("Adicione ao menos um responsável pelas crianças.");
 
                 }
+
+                Model.Suites suite_escolhida = (Model.Suites)pck_suite.SelectedItem;
+
+                if(suite_escolhida.Equals(null))
+                {
+
+                    throw new Exception("Escolha uma suite antes de prosseguir.");
+
+                }
+
+                // Crinado o objeto "dados_hospedagem":
+
+                Model.Hospedagem dados_hospedagem = new Model.Hospedagem()
+                {
+
+                    suite = suite_escolhida,
+
+                    /* Apesar de terem o mesmo nome, não são a mesma coisa. As variáveis que vem antes
+                     * do igual, referem-se a variáveis do objeto, e as que vem depois, referem-se a
+                     variáveis locais. */
+
+                    qnt_adultos = qnt_adultos,
+
+                    qnt_criancas = qnt_criancas,
+
+                    // Calculando a quantidade de dias que o usuário ficará no hotel:
+
+                    qnt_dias = Model.Hospedagem.Tempo_Estadia(dtpck_checkin.Date, dtpck_checkout.Date),
+
+                    data_checkin = dtpck_checkin.Date,
+
+                    data_checkout = dtpck_checkout.Date
+
+                };
+
+                // Calculando o valor da estadia:
+
+                dados_hospedagem.valor_total = dados_hospedagem.Valor_Estadia();
+
+                /* A palavra "var" serve para quando não sabemos o tipo de uma variável e, portanto,
+                 * o sistema será o responsável por determinar isso. O sistema irá analizar o que é colocado dentro
+                 * da variável em específico para então depois determinar seu tipo. Um exemplo, é se o valor da
+                 * variável "tela_de_calculos" fosse o número dois. O sistema iria analizar que isso é um número
+                 * inteiro e, então, definiria o tipo dessa variável como "int". */
+
+                var tela_de_calculos = new Calculos_Hospedagem();
+
+                /* intruindo ao sistema que procure o objeto "dados_hospedagem" e que permita o uso de seus dados na
+                 * página "tela_de_calculos". */
+
+                tela_de_calculos.BindingContext = dados_hospedagem;
+
+                // Abrindo a página "tela_de_calculos".
+
+                await Navigation.PushAsync(tela_de_calculos);
 
             }
 

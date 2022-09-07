@@ -12,7 +12,7 @@ namespace App_Hotel.Model
 
         // Variáveis da Classe:
 
-        public Suites quarto { get; set; }
+        public Suites suite { get; set; }
 
         public int qnt_adultos { get; set; }
 
@@ -40,9 +40,9 @@ namespace App_Hotel.Model
         public double Valor_Estadia()
         {
 
-            double valor_adultos = (qnt_adultos * quarto.valor_diaria_adultos) * qnt_dias;
+            double valor_adultos = (qnt_adultos * suite.valor_diaria_adultos) * qnt_dias;
 
-            double valor_criancas = (qnt_criancas * quarto.valor_diaria_criancas) * qnt_dias;
+            double valor_criancas = (qnt_criancas * suite.valor_diaria_criancas) * qnt_dias;
 
             double valor_total_hospedagem = valor_adultos + valor_criancas;
 

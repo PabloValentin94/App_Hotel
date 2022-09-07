@@ -73,7 +73,7 @@
                        Text="{ Binding Value }"/>
 
                 <!-- O "BindingContext" é um elemento, cuja função é, basicamente, buscar informações sobre um 
-                determinado elemento no sistema. Caso ele não consiga encontrar, então ocorrerá um erro.
+                     determinado elemento no sistema. Caso ele não consiga encontrar, então ocorrerá um erro.
                      O "Binding" serve para que possamos retornar um dos parâmetros do elemento encontrado. Nesse 
                      caso, por exemplo, os parâmetros disponíveis são: Value; Minimum; Maximum; etc. -->
 
