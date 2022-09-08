@@ -11,12 +11,12 @@
             
             <!-- Título -->
 
-            <Label Text="Cálculo da Diária"
-                       HorizontalTextAlignment="Center"
-                       Margin="15,0,15,25"
-                       Style="{ StaticResource titulo }"/>
+            <Label Text="Contratação"
+                   HorizontalTextAlignment="Center"
+                   Margin="15,0,15,25"
+                   Style="{ StaticResource titulo }"/>
 
-            <Grid x:Name="g1" RowSpacing="1" ColumnSpacing="1" Padding="15,0,15,25">
+            <Grid RowSpacing="1" ColumnSpacing="1" Padding="15,0,15,25">
 
                 <Grid.ColumnDefinitions>
 
