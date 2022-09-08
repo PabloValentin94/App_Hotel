@@ -33,6 +33,10 @@ namespace App_Hotel.Model
 
             int total_dias = checkout.Subtract(checkin).Days;
 
+            /* Não é necessário fazer uma validação, pois já foi feita uma validação no arquivo C#
+             * "Contratação_Hospedagem". Essa validação faz com que o dia mínimo e máximo de Check-Out variem de
+             * acordo com a data de Check-In, portanto, é impossível dar um número negativo. */
+
             return total_dias;
 
         }
