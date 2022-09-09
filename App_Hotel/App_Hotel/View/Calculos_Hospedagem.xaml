@@ -99,7 +99,7 @@
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
 
-                <Label Text="{ Binding data_checkin }" x:Name="lbl_data_checkin"
+                <Label Text="{ Binding horario_checkin }" x:Name="lbl_data_checkin"
                        Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"
                        HorizontalTextAlignment="Start"
                        FontSize="Small"
@@ -113,7 +113,7 @@
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
 
-                <Label Text="{ Binding data_checkout }" x:Name="lbl_data_checkout"
+                <Label Text="{ Binding horario_checkout }" x:Name="lbl_data_checkout"
                        Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
                        HorizontalTextAlignment="Start"
                        FontSize="Small"

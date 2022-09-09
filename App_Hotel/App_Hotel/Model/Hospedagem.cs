@@ -20,9 +20,9 @@ namespace App_Hotel.Model
 
         public int qnt_dias { get; set; }
 
-        public DateTime data_checkin { get; set; }
+        public DateTime horario_checkin { get; set; }
 
-        public DateTime data_checkout { get; set; }
+        public DateTime horario_checkout { get; set; }
 
         public double valor_total { get; set; }
 
