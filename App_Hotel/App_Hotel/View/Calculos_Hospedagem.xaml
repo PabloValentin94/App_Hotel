@@ -131,6 +131,7 @@
                         TextColor="#0A75AD"
                         BorderWidth="5"
                         BorderColor="#0A75AD"
+                        BorderRadius="100"
                         Clicked="btn_voltar_Clicked"
                         Margin="0,15,0,10"/>
 
