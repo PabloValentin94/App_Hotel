@@ -24,7 +24,7 @@ namespace App_Hotel.View
 
             // Desabilitando a barra de navegação:
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
 
             // Definindo uma variável com as mesmas funcionalidades do arquivo App:
 

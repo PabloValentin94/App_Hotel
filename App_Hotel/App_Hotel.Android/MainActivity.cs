@@ -20,7 +20,7 @@ namespace App_Hotel.Droid
 
             Window.ClearFlags(Android.Views.WindowManagerFlags.TranslucentStatus);
             Window.AddFlags(Android.Views.WindowManagerFlags.DrawsSystemBarBackgrounds);
-            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#000000"));
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#0A75AD"));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

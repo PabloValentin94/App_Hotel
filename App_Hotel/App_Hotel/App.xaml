@@ -5,19 +5,37 @@
     
     <Application.Resources>
 
-        <Style x:Key="titulo" TargetType="Label">
+        <Style x:Key="Fonte_Personalizada" TargetType="Label">
 
-            <Setter Property="TextColor" Value="#FFFF00"/>
-            <Setter Property="FontSize" Value="Title"/>
+            <Setter Property="FontFamily">
+
+                <Setter.Value>
+
+                    <OnPlatform x:TypeArguments="x:String"
+                                iOS="RockStyle.ttf"
+                                Android="RockStyle.ttf#RockStyle"/>
+
+                </Setter.Value>
+                
+            </Setter>
+            
+        </Style>
+
+        <Style x:Key="titulo" TargetType="Label" BaseResourceKey="Fonte_Personalizada">
+
+            <Setter Property="TextColor" Value="#0A75AD"/>
+            <Setter Property="FontSize" Value="60"/>
             <Setter Property="FontAttributes" Value="Bold"/>
 
         </Style>
 
-        <Style x:Key="subtitulo" TargetType="Label" BaseResourceKey="lbl_campos">
+        <Style x:Key="subtitulo" TargetType="Label" BaseResourceKey="Fonte_Personalizada">
 
-            <Setter Property="TextColor" Value="#FF0000"/>
-            <Setter Property="Margin" Value="0,5,0,0"/>
-            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="TextColor" Value="#0A75AD"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
 
         </Style>
 
@@ -35,7 +53,7 @@
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="FontSize" Value="Medium"/>
             <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="TextColor" Value="#FFFFFF"/>
+            <Setter Property="TextColor" Value="#000000"/>
 
         </Style>
 
@@ -44,7 +62,7 @@
             <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
             <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="TextColor" Value="#FF0000"/>
+            <Setter Property="TextColor" Value="#FFFFFF"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="FontSize" Value="Large"/>
             <Setter Property="Margin" Value="5,0,0,0"/>

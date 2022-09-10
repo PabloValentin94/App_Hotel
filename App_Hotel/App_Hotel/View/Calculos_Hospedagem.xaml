@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App_Hotel.View.Calculos_Hospedagem"
              Title="Cálculos da hospdagem"
-             BackgroundColor="#000000">
+             BackgroundColor="#0A75AD">
     
     <ContentPage.Content>
         
         <StackLayout VerticalOptions="Center">
 
-            <Label Text="Cálculos da Diária"
+            <Label Text="Cálculos"
                    HorizontalTextAlignment="Center"
+                   TextColor="#FFFF00"
                    Style="{ StaticResource titulo }"/>
 
             <Grid RowSpacing="1" ColumnSpacing="1" Padding="15,10,15,25">
@@ -39,7 +40,7 @@
                 <Label Text="Suite Escolhida:"
                        Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
                        FontSize="Large"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -52,7 +53,7 @@
                 <Label Text="Quantidade de Adultos:"
                        Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
                        FontSize="Medium"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -66,7 +67,7 @@
                 <Label Text="Quantidade de Crianças:"
                        Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                        FontSize="Medium"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -80,7 +81,7 @@
                 <Label Text="Quantidade de Dias:"
                        Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"
                        FontSize="Medium"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -94,7 +95,7 @@
                 <Label Text="Data de Check-In:"
                        Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
                        FontSize="Medium"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -108,7 +109,7 @@
                 <Label Text="Data de Check-Out:"
                        Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"
                        FontSize="Medium"
-                       TextColor="#FFFFFF"
+                       TextColor="#000000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        FontAttributes="None"
                        Style="{ StaticResource lbl_campos }"/>
@@ -122,9 +123,8 @@
                 <Label Text="Valor Total:"
                        Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"
                        FontSize="Large"
-                       TextColor="#FFFFFF"
+                       TextColor="#FF0000"
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       FontAttributes="None"
                        Margin="0,5,0,0"
                        Style="{ StaticResource lbl_campos }"/>
 
