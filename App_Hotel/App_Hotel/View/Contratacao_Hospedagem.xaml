@@ -52,7 +52,6 @@
                         <Label Text="Adultos:" HorizontalTextAlignment="End"
                            Grid.Column="0" Grid.Row="0"
                            FontSize="Medium"
-                           TextColor="#808080"
                            Style="{ StaticResource lbl_campos }"/>
 
                         <Stepper x:Name="stepper_adultos" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"
@@ -69,7 +68,6 @@
                         <Label Text="Crianças:" HorizontalTextAlignment="End"
                            Grid.Column="0" Grid.Row="1"
                            FontSize="Medium"
-                           TextColor="#808080"
                            Style="{ StaticResource lbl_campos }"/>
 
                         <Stepper x:Name="stepper_criancas" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"
@@ -97,7 +95,8 @@
                                 Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5"
                                 ItemDisplayBinding="{ Binding descricao }"
                                 HorizontalTextAlignment="Center" VerticalOptions="Center"
-                                FontSize="17" TextColor="#000000"/>
+                                FontSize="17" TextColor="#000000"
+                                Title="Escolha uma das opções" TitleColor="#808080"/>
 
                         <Label Text="Selecione o Tempo da Estadia:"
                                Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="5"
@@ -135,7 +134,7 @@
                                        FontSize="17"
                                        HorizontalTextAlignment="End"
                                        VerticalTextAlignment="Center"
-                                       TextColor="#808080"/>
+                                       Style="{ StaticResource lbl_campos }"/>
 
                                 <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy"
                                             Grid.Column="1" Grid.Row="0"
@@ -148,7 +147,7 @@
                                        FontSize="17"
                                        HorizontalTextAlignment="End"
                                        VerticalTextAlignment="Center"
-                                       TextColor="#808080"/>
+                                       Style="{ StaticResource lbl_campos }"/>
 
                                 <TimePicker x:Name="tmpck_checkin" Format="HH:mm:ss"
                                         Grid.Column="3" Grid.Row="0"
@@ -162,7 +161,7 @@
                                        FontSize="17"
                                        HorizontalTextAlignment="End"
                                        VerticalTextAlignment="Center"
-                                       TextColor="#808080"/>
+                                       Style="{ StaticResource lbl_campos }"/>
 
                                 <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"
                                             Grid.Column="1" Grid.Row="1"
@@ -174,7 +173,7 @@
                                        FontSize="17"
                                        HorizontalTextAlignment="End"
                                        VerticalTextAlignment="Center"
-                                       TextColor="#808080"/>
+                                       Style="{ StaticResource lbl_campos }"/>
 
                                 <TimePicker x:Name="tmpck_checkout" Format="HH:mm:ss"
                                             Grid.Column="3" Grid.Row="1"
@@ -191,7 +190,7 @@
 
                 <!-- Botão -->
 
-                <Button x:Name="btn_calcular" Text="Calcular gastos" Background="#FFFFFF"
+                <Button x:Name="btn_calcular" Text="Calcular gastos" BackgroundColor="#FFFFFF"
                         TextColor="#0A75AD"
                         BorderWidth="5"
                         BorderColor="#0A75AD"

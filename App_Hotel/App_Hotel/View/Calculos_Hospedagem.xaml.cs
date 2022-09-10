@@ -20,10 +20,16 @@ namespace App_Hotel.View
 
             InitializeComponent();
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
+        private void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+
+            Navigation.PopAsync();
+
+        }
     }
 
 }
