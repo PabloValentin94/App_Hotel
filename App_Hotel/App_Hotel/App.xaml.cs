@@ -73,7 +73,19 @@ namespace App_Hotel
 
             //MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
 
-            MainPage = new NavigationPage(new View.Login());
+            if (Properties.ContainsKey("logado"))
+            {
+
+                MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
+
+            }
+
+            else
+            {
+
+                MainPage = new NavigationPage(new View.Login());
+
+            }
 
         }
 

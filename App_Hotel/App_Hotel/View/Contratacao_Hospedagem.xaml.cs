@@ -22,13 +22,20 @@ namespace App_Hotel.View
 
             InitializeComponent();
 
-            // Desabilitando a barra de navegação:
-
-            //NavigationPage.SetHasNavigationBar(this, false);
-
             // Definindo uma variável com as mesmas funcionalidades do arquivo App:
 
             PropriedadesApp = (App)Application.Current;
+
+            if (PropriedadesApp.Properties.ContainsKey("logado"))
+            {
+
+                saudacao();
+
+            }
+
+            // Desabilitando a barra de navegação:
+
+            //NavigationPage.SetHasNavigationBar(this, false);
 
             // Inserindo itens itens dentro do Picker, através da lista "tipos_de_suite":
 
@@ -55,6 +62,14 @@ namespace App_Hotel.View
             dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
 
             dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddDays(35);
+
+        }
+
+        async void saudacao()
+        {
+
+            await DisplayAlert("Olá!", "Seja bem-vindo, " + PropriedadesApp.Properties["logado"].ToString()
+                               + ".", "OK");
 
         }
 
@@ -162,6 +177,22 @@ namespace App_Hotel.View
 
         }
 
+        private async void btn_sair_Clicked(object sender, EventArgs e)
+        {
+
+            bool confirmacao = await DisplayAlert("Atenção!", "Deseja realmente sair da sua conta?",
+                                                  "Sim", "Não");
+
+            if(confirmacao)
+            {
+
+                App.Current.Properties.Remove("logado");
+
+                App.Current.MainPage = new NavigationPage(new Login());
+
+            }
+
+        }
     }
 
 }

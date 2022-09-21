@@ -6,11 +6,15 @@
     
     <ContentPage.Content>
 
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout VerticalOptions="Center">
 
-            <Frame CornerRadius="10">
+            <Frame CornerRadius="10" Margin="15,0,15,0">
 
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                    <Label Text="Login"
+                           HorizontalTextAlignment="Center"
+                           Style="{ StaticResource titulo }"/>
 
                     <Label Text="Usuário:"
                        HorizontalTextAlignment="Center"
@@ -19,23 +23,51 @@
                     <Entry x:Name="txt_usuario"
                            HorizontalTextAlignment="Center"
                            Placeholder="Insira seu nome de usuário"
-                           PlaceholderColor="#808080"/>
+                           PlaceholderColor="#808080"
+                           TextColor="#000000"
+                           MaxLength="50" FontSize="15"/>
 
                     <Label Text="Senha:"
                            HorizontalTextAlignment="Center"
                            Style="{ StaticResource subtitulo }"/>
 
-                    <Entry x:Name="txt_senha"
-                           HorizontalTextAlignment="Center"
-                           Placeholder="Insira sua senha"
-                           PlaceholderColor="#808080"/>
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="35"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+
+                        <Entry x:Name="txt_senha"
+                               HorizontalTextAlignment="Center"
+                               Placeholder="Insira sua senha"
+                               PlaceholderColor="#808080"
+                               TextColor="#000000" IsPassword="True"
+                               MaxLength="20" FontSize="15"
+                               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+                        <ImageButton x:Name="imgbtn_mostrar_ocultar_senha"
+                                     Clicked="imgbtn_mostrar_ocultar_senha_Clicked"
+                                     BackgroundColor="#FFFFFF"
+                                     Grid.Column="1" Grid.Row="0"/>
+
+                    </Grid>
 
                     <Button x:Name="btn_entrar" Text="Entrar" BackgroundColor="Transparent"
                             TextColor="#0A75AD"
                             BorderWidth="5"
                             BorderColor="#0A75AD"
                             BorderRadius="100"
-                            Clicked="btn_entrar_Clicked"/>
+                            Clicked="btn_entrar_Clicked"
+                            Margin="0,20,0,0"/>
 
                 </StackLayout>
 
