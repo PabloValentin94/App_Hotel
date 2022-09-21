@@ -20,7 +20,7 @@ namespace App_Hotel.View
 
             InitializeComponent();
 
-            //NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
