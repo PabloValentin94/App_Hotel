@@ -9,99 +9,99 @@
     
     <ContentPage.Content>
 
-        <Frame VerticalOptions="End" HorizontalOptions="Center"
-               CornerRadius="10"
-               Margin="10,10,10,12">
+        <StackLayout VerticalOptions="End" HorizontalOptions="Center">
 
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame CornerRadius="10" Margin="10,10,10,12">
 
-                <!-- Título -->
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-                <Label Text="Contratação"
-                       HorizontalTextAlignment="Center"
-                       Style="{ StaticResource titulo }"/>
+                    <!-- Título -->
 
-                <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="Contratação"
+                           HorizontalTextAlignment="Center"
+                           Style="{ StaticResource titulo }"/>
+
+                    <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
+
+                        <Grid RowSpacing="1" ColumnSpacing="1"
+                              VerticalOptions="Center" HorizontalOptions="Center">
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="82"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="177"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+
+                            </Grid.RowDefinitions>
+
+                            <!-- Adultos -->
+
+                            <Label Text="Adultos:" HorizontalTextAlignment="End"
+                                   Grid.Column="0" Grid.Row="0"
+                                   FontSize="Medium"
+                                   Style="{ StaticResource lbl_campos }"/>
+
+                            <Stepper x:Name="stepper_adultos" Grid.Column="2" Grid.Row="0"
+                                 Minimum="0" Maximum="10" Increment="1"/>
+
+                            <Label x:Name="lbl_qnt_adultos"
+                                   Grid.Column="1" Grid.Row="0"
+                                   Style="{ StaticResource lbl_valores_stepper }"
+                                   BindingContext="{ x:Reference stepper_adultos }"
+                                   Text="{ Binding Value }"/>
+
+                            <!-- Crianças -->
+
+                            <Label Text="Crianças:" HorizontalTextAlignment="End"
+                                   Grid.Column="0" Grid.Row="1"
+                                   FontSize="Medium"
+                                   Style="{ StaticResource lbl_campos }"/>
+
+                            <Stepper x:Name="stepper_criancas" Grid.Column="2" Grid.Row="1"
+                                     Minimum="0" Maximum="15" Increment="1"/>
+
+                            <Label x:Name="lbl_qnt_criancas"
+                                   Grid.Column="1" Grid.Row="1"
+                                   Style="{ StaticResource lbl_valores_stepper }"
+                                   BindingContext="{ x:Reference stepper_criancas }"
+                                   Text="{ Binding Value }"/>
+
+                            <!-- O "BindingContext" é um elemento, cuja função é, basicamente, buscar informações sobre um 
+                             determinado elemento no sistema. Caso ele não consiga encontrar, então ocorrerá um erro.
+                             O "Binding" serve para que possamos retornar um dos parâmetros do elemento encontrado. Nesse 
+                             caso, por exemplo, os parâmetros disponíveis são: Value; Minimum; Maximum; etc. -->
+
+                        </Grid>
+
+                    </ScrollView>
+
+                    <!-- Picker -->
+
+                    <Label Text="Escolha uma Acomodação:"
+                           HorizontalTextAlignment="Center"
+                           Style="{ StaticResource subtitulo }"/>
+
+                    <Picker x:Name="pck_suite"
+                            ItemDisplayBinding="{ Binding descricao }"
+                            HorizontalTextAlignment="Center" VerticalOptions="Center"
+                            FontSize="17" TextColor="#000000"
+                            Title="Escolha uma das opções" TitleColor="#808080"/>
+
+                    <Label Text="Selecione o Tempo da Estadia:"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           Style="{ StaticResource subtitulo }"/>
 
                     <Grid RowSpacing="1" ColumnSpacing="1"
                           VerticalOptions="Center" HorizontalOptions="Center">
-
-                        <Grid.ColumnDefinitions>
-
-                            <ColumnDefinition Width="82"/>
-                            <ColumnDefinition Width="30"/>
-                            <ColumnDefinition Width="177"/>
-
-                        </Grid.ColumnDefinitions>
-
-                        <Grid.RowDefinitions>
-
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
-
-                        </Grid.RowDefinitions>
-
-                        <!-- Adultos -->
-
-                        <Label Text="Adultos:" HorizontalTextAlignment="End"
-                               Grid.Column="0" Grid.Row="0"
-                               FontSize="Medium"
-                               Style="{ StaticResource lbl_campos }"/>
-
-                        <Stepper x:Name="stepper_adultos" Grid.Column="2" Grid.Row="0"
-                                 Minimum="0" Maximum="10" Increment="1"/>
-
-                        <Label x:Name="lbl_qnt_adultos"
-                               Grid.Column="1" Grid.Row="0"
-                               Style="{ StaticResource lbl_valores_stepper }"
-                               BindingContext="{ x:Reference stepper_adultos }"
-                               Text="{ Binding Value }"/>
-
-                        <!-- Crianças -->
-
-                        <Label Text="Crianças:" HorizontalTextAlignment="End"
-                               Grid.Column="0" Grid.Row="1"
-                               FontSize="Medium"
-                               Style="{ StaticResource lbl_campos }"/>
-
-                        <Stepper x:Name="stepper_criancas" Grid.Column="2" Grid.Row="1"
-                                 Minimum="0" Maximum="15" Increment="1"/>
-
-                        <Label x:Name="lbl_qnt_criancas"
-                               Grid.Column="1" Grid.Row="1"
-                               Style="{ StaticResource lbl_valores_stepper }"
-                               BindingContext="{ x:Reference stepper_criancas }"
-                               Text="{ Binding Value }"/>
-
-                        <!-- O "BindingContext" é um elemento, cuja função é, basicamente, buscar informações sobre um 
-                         determinado elemento no sistema. Caso ele não consiga encontrar, então ocorrerá um erro.
-                         O "Binding" serve para que possamos retornar um dos parâmetros do elemento encontrado. Nesse 
-                         caso, por exemplo, os parâmetros disponíveis são: Value; Minimum; Maximum; etc. -->
-
-                    </Grid>
-
-                </ScrollView>
-
-                <!-- Picker -->
-
-                <Label Text="Escolha uma Acomodação:"
-                       HorizontalTextAlignment="Center"
-                       Style="{ StaticResource subtitulo }"/>
-
-                <Picker x:Name="pck_suite"
-                        ItemDisplayBinding="{ Binding descricao }"
-                        HorizontalTextAlignment="Center" VerticalOptions="Center"
-                        FontSize="17" TextColor="#000000"
-                        Title="Escolha uma das opções" TitleColor="#808080"/>
-
-                <Label Text="Selecione o Tempo da Estadia:"
-                       HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       Style="{ StaticResource subtitulo }"/>
-
-                <Grid RowSpacing="1" ColumnSpacing="1"
-                      VerticalOptions="Center" HorizontalOptions="Center">
 
                         <Grid.ColumnDefinitions>
 
@@ -172,21 +172,23 @@
                                     HorizontalOptions="Start" VerticalOptions="End"
                                     FontSize="17" TextColor="#000000"/>
 
-                </Grid>
+                    </Grid>
 
-                <!-- Botão -->
+                    <!-- Botão -->
 
-                <Button x:Name="btn_calcular" Text="Calcular gastos" BackgroundColor="#FFFFFF"
-                        TextColor="#0A75AD"
-                        BorderWidth="5"
-                        BorderColor="#0A75AD"
-                        BorderRadius="100"
-                        Clicked="btn_calcular_Clicked"
-                        Margin="0,10,0,10"/>
+                    <Button x:Name="btn_calcular" Text="Calcular gastos" BackgroundColor="Transparent"
+                            TextColor="#0A75AD"
+                            BorderWidth="5"
+                            BorderColor="#0A75AD"
+                            BorderRadius="100"
+                            Clicked="btn_calcular_Clicked"
+                            Margin="0,10,0,10"/>
 
-            </StackLayout>
+                </StackLayout>
 
-        </Frame>
+            </Frame>
+
+        </StackLayout>
 
     </ContentPage.Content>
     

@@ -1,16 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Hotel.View.Login">
+             x:Class="App_Hotel.View.Login"
+             BackgroundColor="#0A75AD">
     
     <ContentPage.Content>
-        
-        <StackLayout>
-            
-            
-            
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Frame CornerRadius="10">
+
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                    <Label Text="Usuário:"
+                       HorizontalTextAlignment="Center"
+                       Style="{ StaticResource subtitulo }"/>
+
+                    <Entry x:Name="txt_usuario"
+                           HorizontalTextAlignment="Center"
+                           Placeholder="Insira seu nome de usuário"
+                           PlaceholderColor="#808080"/>
+
+                    <Label Text="Senha:"
+                           HorizontalTextAlignment="Center"
+                           Style="{ StaticResource subtitulo }"/>
+
+                    <Entry x:Name="txt_senha"
+                           HorizontalTextAlignment="Center"
+                           Placeholder="Insira sua senha"
+                           PlaceholderColor="#808080"/>
+
+                    <Button x:Name="btn_entrar" Text="Entrar" BackgroundColor="Transparent"
+                            TextColor="#0A75AD"
+                            BorderWidth="5"
+                            BorderColor="#0A75AD"
+                            BorderRadius="100"
+                            Clicked="btn_entrar_Clicked"/>
+
+                </StackLayout>
+
+            </Frame>
+
         </StackLayout>
-        
+
     </ContentPage.Content>
     
 </ContentPage>

@@ -15,6 +15,8 @@ namespace App_Hotel.View
     public partial class Login : ContentPage
     {
 
+        App PropriedadesApp;
+
         public Login()
         {
 
@@ -22,8 +24,22 @@ namespace App_Hotel.View
 
             NavigationPage.SetHasNavigationBar(this, false);
 
+            PropriedadesApp = (App)Application.Current;
+
         }
 
+        private void btn_entrar_Clicked(object sender, EventArgs e)
+        {
+
+            if(PropriedadesApp.lista_usuarios_cadastrados.Any(i => i.usuario == txt_usuario.Text &&
+               i.senha == txt_senha.Text))
+            {
+
+                App.Current.MainPage = new View.Contratacao_Hospedagem();
+
+            }
+
+        }
     }
 
 }

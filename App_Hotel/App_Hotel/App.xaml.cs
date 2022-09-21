@@ -50,6 +50,20 @@ namespace App_Hotel
 
         };
 
+        public List<Model.dados_login> lista_usuarios_cadastrados = new List<Model.dados_login>()
+        {
+
+            new Model.dados_login()
+            {
+
+                usuario = "Pablo Valentin",
+
+                senha = "211066"
+
+            }
+
+        };
+
         public App()
         {
 
@@ -57,7 +71,9 @@ namespace App_Hotel
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-br");
 
-            MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
+            //MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
+
+            MainPage = new NavigationPage(new View.Login());
 
         }
 

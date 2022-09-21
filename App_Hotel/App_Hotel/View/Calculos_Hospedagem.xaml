@@ -127,7 +127,7 @@
 
                 </Grid>
 
-                <Button x:Name="btn_voltar" Text="Voltar" BackgroundColor="#FFFFFF"
+                <Button x:Name="btn_voltar" Text="Voltar" BackgroundColor="Transparent"
                         TextColor="#0A75AD"
                         BorderWidth="5"
                         BorderColor="#0A75AD"
