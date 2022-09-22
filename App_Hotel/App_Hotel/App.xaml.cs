@@ -56,9 +56,27 @@ namespace App_Hotel
             new Model.dados_login()
             {
 
-                usuario = "Pablo Valentin",
+                usuario = "PABLO VALENTIN",
 
                 senha = "211066"
+
+            },
+
+            new Model.dados_login()
+            {
+
+                usuario = "TIAGO ANTONIO DA SILVA",
+
+                senha = "tiagotas"
+
+            },
+
+            new Model.dados_login()
+            {
+
+                usuario = "MARCOS ROGERIO PAGAGNOTTI",
+
+                senha = "marcao"
 
             }
 

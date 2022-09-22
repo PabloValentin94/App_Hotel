@@ -36,7 +36,7 @@ namespace App_Hotel.View
             try
             {
 
-                if(txt_usuario.Text == "" || txt_senha.Text == "")
+                if(String.IsNullOrEmpty(txt_usuario.Text) || String.IsNullOrEmpty(txt_senha.Text))
                 {
 
                     throw new Exception("Preencha todos os campos antes de prosseguir.");
@@ -46,8 +46,8 @@ namespace App_Hotel.View
                 else
                 {
 
-                    if (PropriedadesApp.lista_usuarios_cadastrados.Any(i => i.usuario == txt_usuario.Text &&
-                        i.senha == txt_senha.Text))
+                    if (PropriedadesApp.lista_usuarios_cadastrados.Any(i => i.usuario ==
+                        txt_usuario.Text.ToUpper() && i.senha == txt_senha.Text))
                     {
 
                         PropriedadesApp.Properties.Add("logado", txt_usuario.Text);
