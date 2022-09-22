@@ -26,8 +26,7 @@ namespace App_Hotel.View
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource(
-                                                  "App_Hotel.View.Images.show_password.png");
+            imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource("App_Hotel.View.Images.show_password.png");
 
         }
 
@@ -51,9 +50,9 @@ namespace App_Hotel.View
                         i.senha == txt_senha.Text))
                     {
 
-                        App.Current.Properties.Add("logado", txt_usuario.Text);
+                        PropriedadesApp.Properties.Add("logado", txt_usuario.Text);
 
-                        App.Current.MainPage = new NavigationPage(new Contratacao_Hospedagem());
+                        PropriedadesApp.MainPage = new NavigationPage(new Contratacao_Hospedagem());
 
                     }
 
@@ -83,8 +82,7 @@ namespace App_Hotel.View
             if(txt_senha.IsPassword)
             {
 
-                imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource(
-                                                      "App_Hotel.View.Images.hide_password.png");
+                imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource("App_Hotel.View.Images.hide_password.png");
 
                 txt_senha.IsPassword = false;
 
@@ -93,8 +91,7 @@ namespace App_Hotel.View
             else
             {
 
-                imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource(
-                                                      "App_Hotel.View.Images.show_password.png");
+                imgbtn_mostrar_ocultar_senha.Source = ImageSource.FromResource("App_Hotel.View.Images.show_password.png");
 
                 txt_senha.IsPassword = true;
 
