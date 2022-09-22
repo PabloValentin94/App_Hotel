@@ -50,7 +50,7 @@ namespace App_Hotel.View
                         txt_usuario.Text.ToUpper() && i.senha == txt_senha.Text))
                     {
 
-                        PropriedadesApp.Properties.Add("logado", txt_usuario.Text);
+                        PropriedadesApp.Properties.Add("logado", txt_usuario.Text.ToUpper());
 
                         PropriedadesApp.MainPage = new NavigationPage(new Contratacao_Hospedagem());
 
