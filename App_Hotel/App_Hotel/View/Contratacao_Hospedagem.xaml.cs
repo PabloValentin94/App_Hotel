@@ -68,7 +68,7 @@ namespace App_Hotel.View
         async void saudacao()
         {
 
-            await DisplayAlert("Olá!", "Seja bem-vindo, " + PropriedadesApp.Properties["logado"].ToString()
+            await DisplayAlert("Olá!", "Seja bem-vindo(a), " + PropriedadesApp.Properties["logado"].ToString()
                                + ".", "OK");
 
         }
@@ -87,14 +87,14 @@ namespace App_Hotel.View
 
                 // Criando memsagens para possíveis erros: 
 
-                if(qnt_adultos.Equals(0) && qnt_criancas.Equals(0))
+                if(qnt_adultos == 0 && qnt_criancas == 0)
                 {
 
                     throw new Exception("Adicione ao menos uma pessoa antes de prosseguir.");
 
                 }
 
-                else if (qnt_adultos.Equals(0) && qnt_criancas != 0)
+                else if (qnt_adultos == 0 && qnt_criancas != 0)
                 {
 
                     throw new Exception("Adicione ao menos um responsável pela(s) criança(s).");
@@ -186,9 +186,9 @@ namespace App_Hotel.View
             if(confirmacao)
             {
 
-                App.Current.Properties.Remove("logado");
+                PropriedadesApp.Properties.Remove("logado");
 
-                App.Current.MainPage = new NavigationPage(new Login());
+                PropriedadesApp.MainPage = new NavigationPage(new Login());
 
             }
 
