@@ -40,7 +40,7 @@ namespace App_Hotel.View
                 if(txt_usuario.Text == "" || txt_senha.Text == "")
                 {
 
-                    await DisplayAlert("Erro!", "Preencha todos os campos antes de prosseguir", "OK");
+                    throw new Exception("Preencha todos os campos antes de prosseguir.");
 
                 }
 
