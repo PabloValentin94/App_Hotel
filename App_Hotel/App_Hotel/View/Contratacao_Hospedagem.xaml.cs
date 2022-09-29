@@ -135,6 +135,14 @@ namespace App_Hotel.View
 
                             qnt_dias = Model.Hospedagem.Tempo_Estadia(dtpck_checkin.Date, dtpck_checkout.Date),
 
+                            data_checkin = dtpck_checkin.Date,
+
+                            data_checkout = dtpck_checkout.Date,
+
+                            hora_checkin = tmpck_checkin.Time,
+
+                            hora_checkout = tmpck_checkout.Time,
+
                             horario_checkin = dtpck_checkin.Date + tmpck_checkin.Time,
 
                             horario_checkout = dtpck_checkout.Date + tmpck_checkout.Time

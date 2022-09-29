@@ -37,6 +37,117 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Suite:"
+                       Grid.Column="0" Grid.Row="0"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding Path=suite.descricao }" x:Name="lbl_suite"
+                       Grid.Column="1" Grid.Row="0"
+                       HorizontalTextAlignment="Start"
+                       Style="{ StaticResource valores }"/>
+
+                    <Label Text="Qnt. de Adultos:"
+                       Grid.Column="0" Grid.Row="1"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding qnt_adultos }" x:Name="lbl_qnt_adultos"
+                       Grid.Column="1" Grid.Row="1"
+                       HorizontalTextAlignment="Start"
+                       Style="{ StaticResource valores }"/>
+
+                    <Label Text="Qnt. de Crianças:"
+                       Grid.Column="2" Grid.Row="1"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding qnt_criancas }" x:Name="lbl_qnt_criancas"
+                       Grid.Column="3" Grid.Row="1"
+                       HorizontalTextAlignment="Start"
+                       Style="{ StaticResource valores }"/>
+
+                    <!--<Label Text="Qnt. de Dias:"
+                       Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Style="{ StaticResource lbl_campos }"/>-->
+
+                    <Label Text="{ Binding qnt_dias }" x:Name="lbl_qnt_dias"
+                       Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Start"
+                       Style="{ StaticResource valores }"/>
+
+                    <Label Text="Check-In:"
+                       Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding horario_checkin, StringFormat='dd/MM/yyyy' }" x:Name="lbl_data_checkin"
+                       Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Start"
+                       FontSize="Small"
+                       Style="{ StaticResource valores }"/>
+
+                    <Label Text="Check-Out:"
+                           Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"
+                           FontSize="Medium"
+                           HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                           Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding horario_checkout }" x:Name="lbl_data_checkout"
+                       Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Start"
+                       FontSize="Small"
+                       Style="{ StaticResource valores }"/>
+
+                    <Label Text="Total a Pagar:"
+                       Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"
+                       FontSize="Large"
+                       TextColor="#E61919"
+                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                       Margin="0,5,0,0"
+                       Style="{ StaticResource lbl_campos }"/>
+
+                    <Label Text="{ Binding valor_total, StringFormat='{}{0:c}' }" x:Name="lbl_valor_total"
+                       Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2"
+                       HorizontalTextAlignment="Start"
+                       FontSize="Large"
+                       TextColor="#008000"
+                       Margin="5,5,0,0"
+                       Style="{ StaticResource valores }"/>
+
+                </Grid>
+
+
+                <!--
+
+                <Grid RowSpacing="1" ColumnSpacing="1">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                     </Grid.RowDefinitions>
@@ -91,7 +202,7 @@
                        HorizontalTextAlignment="End" VerticalTextAlignment="Center"
                        Style="{ StaticResource lbl_campos }"/>
 
-                    <Label Text="{ Binding horario_checkin }" x:Name="lbl_data_checkin"
+                    <Label Text="{ Binding horario_checkin, StringFormat='dd/MM/yyyy' }" x:Name="lbl_data_checkin"
                        Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"
                        HorizontalTextAlignment="Start"
                        FontSize="Small"
@@ -134,6 +245,8 @@
                         BorderRadius="100"
                         Clicked="btn_voltar_Clicked"
                         Margin="0,15,0,10"/>
+                
+                -->
 
             </StackLayout>
 
