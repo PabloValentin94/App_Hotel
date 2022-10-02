@@ -89,9 +89,11 @@ namespace App_Hotel
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-br");
 
-            MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
+            // Usado para testes:
 
-            /*if (Properties.ContainsKey("logado"))
+            //MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
+
+            if (Properties.ContainsKey("logado"))
             {
 
                 MainPage = new NavigationPage(new View.Contratacao_Hospedagem());
@@ -103,7 +105,7 @@ namespace App_Hotel
 
                 MainPage = new NavigationPage(new View.Login());
 
-            }*/
+            }
 
         }
 

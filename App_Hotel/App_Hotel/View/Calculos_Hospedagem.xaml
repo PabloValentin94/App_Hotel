@@ -8,124 +8,293 @@
     <ContentPage.Content>
 
         <Frame VerticalOptions="Center" HorizontalOptions="Center"
-               CornerRadius="5"
+               CornerRadius="15"
                Margin="10,10,10,12">
 
             <StackLayout VerticalOptions="Center">
 
 
                 <Label Text="Cálculos"
-                   HorizontalTextAlignment="Center"
-                   Style="{ StaticResource titulo }"/>
+                       HorizontalTextAlignment="Center"
+                       Style="{ StaticResource titulo }"/>
 
-                <Grid RowSpacing="1" ColumnSpacing="1">
+                <ScrollView Margin="10,0,10,10">
 
-                    <Grid.ColumnDefinitions>
+                    <StackLayout>
 
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <Label Text="Quarto"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
 
-                    </Grid.ColumnDefinitions>
+                        <Frame x:Name="fme_suite" CornerRadius="100"
+                               BackgroundColor="#D3D3D3">
 
-                    <Grid.RowDefinitions>
+                            <StackLayout>
 
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                                <Grid HorizontalOptions="Center">
 
-                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                    <Label Text="Suite:"
-                       Grid.Column="0" Grid.Row="0"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Style="{ StaticResource lbl_campos }"/>
+                                        <ColumnDefinition Width="130"/>
+                                        <ColumnDefinition Width="115"/>
 
-                    <Label Text="{ Binding Path=suite.descricao }" x:Name="lbl_suite"
-                       Grid.Column="1" Grid.Row="0"
-                       HorizontalTextAlignment="Start"
-                       Style="{ StaticResource valores }"/>
+                                    </Grid.ColumnDefinitions>
 
-                    <Label Text="Qnt. de Adultos:"
-                       Grid.Column="0" Grid.Row="1"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Style="{ StaticResource lbl_campos }"/>
+                                    <!-- Uma Grid já contém uma linha por padrão, sendo opcional, nesse caso, defini-lá. -->
 
-                    <Label Text="{ Binding qnt_adultos }" x:Name="lbl_qnt_adultos"
-                       Grid.Column="1" Grid.Row="1"
-                       HorizontalTextAlignment="Start"
-                       Style="{ StaticResource valores }"/>
+                                    <Label Text="Suite Escolhida:"
+                                           Grid.Column="0" Grid.Row="0"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
 
-                    <Label Text="Qnt. de Crianças:"
-                       Grid.Column="2" Grid.Row="1"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Style="{ StaticResource lbl_campos }"/>
+                                    <Label Text="{ Binding Path=suite.descricao }" x:Name="lbl_suite"
+                                           Grid.Column="1" Grid.Row="0"
+                                           HorizontalTextAlignment="Center"
+                                           Style="{ StaticResource valores }"/>
 
-                    <Label Text="{ Binding qnt_criancas }" x:Name="lbl_qnt_criancas"
-                       Grid.Column="3" Grid.Row="1"
-                       HorizontalTextAlignment="Start"
-                       Style="{ StaticResource valores }"/>
+                                </Grid>
 
-                    <!--<Label Text="Qnt. de Dias:"
-                       Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Style="{ StaticResource lbl_campos }"/>-->
+                            </StackLayout>
 
-                    <Label Text="{ Binding qnt_dias }" x:Name="lbl_qnt_dias"
-                       Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2"
-                       HorizontalTextAlignment="Start"
-                       Style="{ StaticResource valores }"/>
+                        </Frame>
 
-                    <Label Text="Check-In:"
-                       Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Style="{ StaticResource lbl_campos }"/>
+                        <Label Text="Hóspedes"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
 
-                    <Label Text="{ Binding horario_checkin, StringFormat='dd/MM/yyyy' }" x:Name="lbl_data_checkin"
-                       Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"
-                       HorizontalTextAlignment="Start"
-                       FontSize="Small"
-                       Style="{ StaticResource valores }"/>
+                        <Frame x:Name="fme_hospedes" CornerRadius="100"
+                               BackgroundColor="#D3D3D3">
 
-                    <Label Text="Check-Out:"
-                           Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"
-                           FontSize="Medium"
-                           HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                           Style="{ StaticResource lbl_campos }"/>
+                            <StackLayout>
 
-                    <Label Text="{ Binding horario_checkout }" x:Name="lbl_data_checkout"
-                       Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
-                       HorizontalTextAlignment="Start"
-                       FontSize="Small"
-                       Style="{ StaticResource valores }"/>
+                                <Grid HorizontalOptions="Center">
 
-                    <Label Text="Total a Pagar:"
-                       Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2"
-                       FontSize="Large"
-                       TextColor="#E61919"
-                       HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-                       Margin="0,5,0,0"
-                       Style="{ StaticResource lbl_campos }"/>
+                                    <Grid.ColumnDefinitions>
 
-                    <Label Text="{ Binding valor_total, StringFormat='{}{0:c}' }" x:Name="lbl_valor_total"
-                       Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2"
-                       HorizontalTextAlignment="Start"
-                       FontSize="Large"
-                       TextColor="#008000"
-                       Margin="5,5,0,0"
-                       Style="{ StaticResource valores }"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="30"/>
 
-                </Grid>
+                                    </Grid.ColumnDefinitions>
 
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Quantidade de Adultos:"
+                                           Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding qnt_adultos }" x:Name="lbl_qnt_adultos"
+                                           Grid.Column="4" Grid.Row="0"
+                                           HorizontalTextAlignment="Center"
+                                           Style="{ StaticResource valores }"/>
+
+                                    <Label Text="Quantidade de Crianças:"
+                                           Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding qnt_criancas }" x:Name="lbl_qnt_criancas"
+                                           Grid.Column="4" Grid.Row="1"
+                                           HorizontalTextAlignment="Center"
+                                           Style="{ StaticResource valores }"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                        <Label Text="Tempo da Estadia:"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
+
+                        <Frame x:Name="fme_tempo_estadia" CornerRadius="100"
+                               BackgroundColor="#D3D3D3">
+
+                            <StackLayout>
+
+                                <Grid HorizontalOptions="Center">
+
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="30"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Uma Grid já contém uma linha por padrão, sendo opcional, nesse caso, defini-lá. -->
+
+                                    <Label Text="Quantidade de Dias:"
+                                           Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding qnt_dias }" x:Name="lbl_qnt_dias"
+                                           Grid.Column="3" Grid.Row="0"
+                                           HorizontalTextAlignment="Center"
+                                           Style="{ StaticResource valores }"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                        <Label Text="Horário de Chegada:"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
+
+                        <Frame x:Name="fme_check_in" CornerRadius="100"
+                               BackgroundColor="#D3D3D3">
+
+                            <StackLayout>
+
+                                <Grid HorizontalOptions="Center">
+
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="80"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Data:"
+                                           Grid.Column="0" Grid.Row="0"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding data_checkin, StringFormat='{}{0:dd/MM/yyyy}' }" x:Name="lbl_data_checkin"
+                                           Grid.Column="1" Grid.Row="0"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="Small"
+                                           Style="{ StaticResource valores }"/>
+
+                                    <Label Text="Hora:"
+                                           Grid.Column="0" Grid.Row="1"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding hora_checkin, StringFormat='{}{0:HH:mm:ss}' }" x:Name="lbl_hora_checkin"
+                                           Grid.Column="1" Grid.Row="1"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="Small"
+                                           Style="{ StaticResource valores }"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                        <Label Text="Horário de Saída:"
+                               HorizontalTextAlignment="Center"
+                               Style="{ StaticResource subtitulo }"/>
+
+                        <Frame x:Name="fme_check_out" CornerRadius="100"
+                               BackgroundColor="#D3D3D3">
+
+                            <StackLayout>
+
+                                <Grid HorizontalOptions="Center">
+
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="80"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Data:"
+                                           Grid.Column="0" Grid.Row="0"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding data_checkout, StringFormat='{}{0:dd/MM/yyyy}' }" x:Name="lbl_data_checkout"
+                                           Grid.Column="1" Grid.Row="0"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="Small"
+                                           Style="{ StaticResource valores }"/>
+
+                                    <Label Text="Hora:"
+                                           Grid.Column="0" Grid.Row="1"
+                                           FontSize="Medium"
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="#8B0000"
+                                           Style="{ StaticResource lbl_campos }"/>
+
+                                    <Label Text="{ Binding hora_checkout, StringFormat='{}{0:HH:mm:ss}' }" x:Name="lbl_hora_checkout"
+                                           Grid.Column="1" Grid.Row="1"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="Small"
+                                           Style="{ StaticResource valores }"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+                <Label Text="Gasto Total:"
+                                   FontSize="Large"
+                                   TextColor="#E61919"
+                                   HorizontalTextAlignment="Center"
+                                   Style="{ StaticResource lbl_campos }"/>
+
+                <Label Text="{ Binding valor_total, StringFormat='{}{0:c}' }" x:Name="lbl_valor_total"
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="Large"
+                                   TextColor="#008000"
+                                   Style="{ StaticResource valores }"/>
+
+                <Button x:Name="btn_voltar" Text="Voltar" BackgroundColor="Transparent"
+                        TextColor="#0A75AD"
+                        BorderWidth="5"
+                        BorderColor="#0A75AD"
+                        BorderRadius="100"
+                        Clicked="btn_voltar_Clicked"
+                        Margin="0,5,0,10"/>
 
                 <!--
 

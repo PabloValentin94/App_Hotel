@@ -11,7 +11,7 @@
 
         <StackLayout VerticalOptions="End" HorizontalOptions="Center">
 
-            <Frame CornerRadius="10" Margin="10,0,10,10">
+            <Frame CornerRadius="15" Margin="10,0,10,10">
 
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 

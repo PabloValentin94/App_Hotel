@@ -47,10 +47,10 @@ namespace App_Hotel.View
                 {
 
                     if (PropriedadesApp.lista_usuarios_cadastrados.Any(i => i.usuario ==
-                        txt_usuario.Text.ToUpper() && i.senha == txt_senha.Text))
+                        txt_usuario.Text.Trim().ToUpper() && i.senha == txt_senha.Text.Trim()))
                     {
 
-                        PropriedadesApp.Properties.Add("logado", txt_usuario.Text.ToUpper());
+                        PropriedadesApp.Properties.Add("logado", txt_usuario.Text.Trim().ToUpper());
 
                         PropriedadesApp.MainPage = new NavigationPage(new Contratacao_Hospedagem());
 
