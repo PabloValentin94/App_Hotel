@@ -78,6 +78,15 @@ namespace App_Hotel
 
                 senha = "marcao"
 
+            },
+
+            new Model.dados_login()
+            {
+
+                usuario = "VISITANTE",
+
+                senha = "1234"
+
             }
 
         };
